@@ -1,0 +1,32 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/hydrolix/hydrolix-ai-toolkit + https://github.com/hydrolix/mcp-hydrolix
+skills:
+  - file: PUBLISHED
+    name: bot-insights
+    published: true
+    source: https://github.com/hydrolix/hydrolix-ai-toolkit
+    install: claude plugin install hydrolix/hydrolix-ai-toolkit
+    description: >-
+      Official Hydrolix AI Toolkit skill for bot-traffic intelligence — scoring, verified vs
+      unverified classification, and attack-data analysis over Hydrolix Bot Insights data.
+  - file: PUBLISHED
+    name: debugging-hydrolix-queries
+    published: true
+    source: https://github.com/hydrolix/hydrolix-ai-toolkit
+    install: claude plugin install hydrolix/hydrolix-ai-toolkit
+    description: >-
+      Official Hydrolix AI Toolkit skill for diagnosing query issues — timeouts, out-of-memory,
+      database exceptions, storage errors, circuit-breaker trips, and performance degradation.
+  - file: hydrolix-explore-and-query.md
+    name: Explore databases and run a SELECT query
+    published: false
+    api: mcp/hydrolix-mcp.yml
+    operations: [list_databases, list_tables, get_table_info, run_select_query]
+    description: >-
+      Generated operating instructions for an agent to discover Hydrolix databases/tables and
+      run a read-only ClickHouse SQL query via the official MCP server.
+notes: >-
+  The hydrolix-ai-toolkit publishes real, installable Agent Skills (Apache-2.0). They require a
+  Hydrolix cluster with the MCP server (mcp/hydrolix-mcp.yml) connected. The generated skill below
+  is grounded in the verified MCP tool names.

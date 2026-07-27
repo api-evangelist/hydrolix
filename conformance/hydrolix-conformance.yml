@@ -1,0 +1,25 @@
+generated: '2026-07-19'
+method: derived
+source: >-
+  github.com/hydrolix (opentelemetry-collector-contrib, hydrolix-exporter, clickhouse-go,
+  clickhouse-sqlalchemy, clickhouse-sql-parser) + docs.hydrolix.io
+standards:
+  - id: clickhouse-sql
+    conforms: true
+    evidence: >-
+      Query API and MCP run_select_query execute ClickHouse SQL; first-party ClickHouse
+      Go driver, SQLAlchemy dialect, and SQL parser forks are published.
+  - id: opentelemetry
+    conforms: true
+    evidence: >-
+      Hydrolix publishes an OpenTelemetry exporter and an opentelemetry-collector-contrib
+      fork for OTLP log/telemetry ingestion.
+  - id: oauth2
+    conforms: false
+    evidence: No OAuth2 authorization-server is documented; auth is credential/service-account bearer tokens.
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: No public OpenAPI spec captured; error envelope not confirmed as application/problem+json.
+  - id: grafana-datasource
+    conforms: true
+    evidence: Official Grafana data source plugin (github.com/hydrolix/grafana-datasource-plugin).

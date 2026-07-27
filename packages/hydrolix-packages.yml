@@ -1,0 +1,71 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/hydrolix + PyPI + Grafana catalog
+packages:
+  - language: python
+    registry: pypi
+    name: hdxcli
+    url: https://pypi.org/project/hdxcli/
+    install: pip install hdxcli
+    official: true
+    kind: cli
+    repo: https://github.com/hydrolix/hdxcli
+    description: Command-line client to interact with Hydrolix clusters (Config API + service accounts).
+  - language: python
+    registry: pypi
+    name: mcp-hydrolix
+    url: https://pypi.org/project/mcp-hydrolix/
+    install: uvx mcp-hydrolix
+    official: true
+    kind: mcp-server
+    repo: https://github.com/hydrolix/mcp-hydrolix
+    description: Official Model Context Protocol server for querying a Hydrolix cluster.
+  - language: go
+    registry: pkg.go.dev
+    name: github.com/hydrolix/clickhouse-go
+    url: https://github.com/hydrolix/clickhouse-go
+    official: true
+    kind: driver
+    description: Hydrolix fork of the ClickHouse Go driver; Hydrolix speaks the ClickHouse wire/SQL dialect.
+  - language: python
+    registry: pypi
+    name: clickhouse-sqlalchemy
+    url: https://github.com/hydrolix/clickhouse-sqlalchemy
+    official: true
+    kind: driver
+    description: ClickHouse SQLAlchemy dialect used to query Hydrolix over the ClickHouse-compatible interface.
+  - language: jvm
+    registry: source
+    name: hydrolix/connectors-core
+    url: https://github.com/hydrolix/connectors-core
+    official: true
+    kind: connector
+    description: Scala library for building JVM/big-data connectors to Hydrolix.
+  - language: jvm
+    registry: source
+    name: hydrolix/spark-connector
+    url: https://github.com/hydrolix/spark-connector
+    official: true
+    kind: connector
+    description: Spark/Databricks connector to search Hydrolix archives.
+  - language: jvm
+    registry: source
+    name: hydrolix/trino-connector
+    url: https://github.com/hydrolix/trino-connector
+    official: true
+    kind: connector
+    description: Query Hydrolix tables from the Trino query engine.
+  - language: jvm
+    registry: source
+    name: hydrolix/splunk-connector
+    url: https://github.com/hydrolix/splunk-connector
+    official: true
+    kind: connector
+    description: Query Hydrolix tables from Splunk.
+  - language: typescript
+    registry: grafana
+    name: hydrolix-datasource
+    url: https://github.com/hydrolix/grafana-datasource-plugin
+    official: true
+    kind: plugin
+    description: Hydrolix data source plugin for Grafana visualization.

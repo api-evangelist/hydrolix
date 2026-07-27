@@ -1,0 +1,40 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.hydrolix.io/ + https://github.com/hydrolix/hdxcli + https://github.com/hydrolix/mcp-hydrolix
+authentication:
+  style: bearer
+  detail: >-
+    Credential login (username/password) exchanged for a bearer token, or a service-account
+    token for automation. See authentication/hydrolix-authentication.yml.
+  ref: authentication/hydrolix-authentication.yml
+apis:
+  config:
+    role: Configure and manage the cluster (orgs, projects, tables, transforms, functions, jobs, service accounts).
+    reference: https://docs.hydrolix.io/latest/openapi/config-api/
+  stream:
+    role: Real-time data ingestion (HTTP streaming ingest endpoint).
+    reference: https://docs.hydrolix.io/latest/openapi/stream/
+  query:
+    role: Execute SQL queries and retrieve results (ClickHouse SQL dialect).
+    reference: https://docs.hydrolix.io/latest/openapi/query/
+query_language:
+  dialect: ClickHouse SQL
+  detail: >-
+    Queries are ClickHouse-compatible SQL; the MCP run_select_query tool and the Trino/Spark/
+    Splunk/Grafana connectors all read via the ClickHouse-compatible interface.
+ingestion:
+  modes: [HTTP streaming API, Amazon Kinesis, Data Firehose, S3 autoingest, OpenTelemetry (OTLP)]
+  schema: Transforms define the write-time ingest schema per table.
+idempotency:
+  supported: unknown
+  notes: No documented idempotency-key contract was found; not asserting one.
+pagination:
+  style: unknown
+  notes: No public OpenAPI spec captured to confirm pagination parameters.
+error_envelope:
+  format: unknown
+  notes: Not confirmed; no public spec captured.
+rate_limiting:
+  signaling: unknown
+versioning:
+  ref: lifecycle/hydrolix-lifecycle.yml

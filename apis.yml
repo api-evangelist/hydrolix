@@ -1,23 +1,69 @@
 aid: hydrolix
 name: Hydrolix
-description: 'Hydrolix is a company surfaced as a portfolio company of qed-investors, wing-venture-capital
-  and added to the API Evangelist network as a stub for enrichment. Sector: fintech. This profile is a
-  lead awaiting the enrichment pipeline.'
+description: >-
+  Hydrolix is a real-time log analytics and observability platform built as a streaming data lake:
+  it decouples ingest, storage, and compute so teams can retain full-fidelity log and event data
+  cost-effectively for 15+ months while still serving low-latency queries and dashboards. Data is
+  ingested through an HTTP Streaming API, Amazon Kinesis / Data Firehose, S3 autoingest, and
+  OpenTelemetry, then queried with the ClickHouse SQL dialect via a Query API, MCP server, and
+  connectors for Grafana, Trino, Spark/Databricks, and Splunk. Hydrolix deploys in the customer's
+  own cloud (BYOC on AWS/GCP/Kubernetes) and exposes a Config API, Stream API, and Query API,
+  a hdxcli command-line tool, and an official Model Context Protocol server.
 url: https://raw.githubusercontent.com/api-evangelist/hydrolix/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - qed-investors
 - wing-venture-capital
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: enriched
+x-tier-reason: portfolio-lead-enriched
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
+image: https://avatars.githubusercontent.com/u/50281978?v=4
 tags:
 - Company
-- Fintech
-apis: []
+- Observability
+- Log Analytics
+- Data Lake
+- Streaming
+- ClickHouse
+- Monitoring
+- Time Series
+apis:
+- name: Hydrolix Config API
+  description: Configure and manage a Hydrolix cluster — orgs, projects, tables, transforms, functions, jobs, and service accounts.
+  humanURL: https://docs.hydrolix.io/latest/openapi/config-api/
+  baseURL: https://{cluster-host}/config/v1/
+  properties:
+  - type: APIReference
+    url: https://docs.hydrolix.io/latest/openapi/config-api/
+- name: Hydrolix Stream API
+  description: Real-time HTTP streaming data ingestion into Hydrolix tables.
+  humanURL: https://docs.hydrolix.io/latest/openapi/stream/
+  baseURL: https://{cluster-host}/ingest/
+  properties:
+  - type: APIReference
+    url: https://docs.hydrolix.io/latest/openapi/stream/
+- name: Hydrolix Query API
+  description: Execute ClickHouse SQL queries against Hydrolix and retrieve results.
+  humanURL: https://docs.hydrolix.io/latest/openapi/query/
+  baseURL: https://{cluster-host}/query/
+  properties:
+  - type: APIReference
+    url: https://docs.hydrolix.io/latest/openapi/query/
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -26,3 +72,40 @@ maintainers:
 common:
 - type: Website
   url: https://hydrolix.io
+- type: Documentation
+  url: https://docs.hydrolix.io/latest/
+- type: APIReference
+  url: https://docs.hydrolix.io/latest/openapi/
+- type: GitHubOrganization
+  url: https://github.com/hydrolix
+- type: StatusPage
+  url: https://hydrolixstatus.com
+- type: SignUp
+  url: https://hydrolix.io/aws-marketplace
+- type: Packages
+  url: packages/hydrolix-packages.yml
+- type: SDKs
+  url: packages/hydrolix-packages.yml
+- type: CLI
+  url: cli/hydrolix-cli.yml
+- type: MCPServer
+  url: mcp/hydrolix-mcp.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: Authentication
+  url: authentication/hydrolix-authentication.yml
+- type: Lifecycle
+  url: lifecycle/hydrolix-lifecycle.yml
+- type: Conformance
+  url: conformance/hydrolix-conformance.yml
+- type: Conventions
+  url: conventions/hydrolix-conventions.yml
+- type: LLMsTxt
+  url: llms/hydrolix-llms.txt
+- type: DomainSecurity
+  url: security/hydrolix-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

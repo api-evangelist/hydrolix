@@ -1,0 +1,19 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.hydrolix.io/ + https://hydrolixstatus.com
+versioning:
+  scheme: docs-channel
+  current: latest
+  docs: https://docs.hydrolix.io/latest/
+  notes: >-
+    Documentation and API references are published under a versioned docs channel
+    (docs.hydrolix.io/latest/). Hydrolix is delivered as versioned cluster software
+    (BYOC), released continuously rather than as a dated public REST API version.
+status_page: https://hydrolixstatus.com
+deprecation:
+  policy_url: null
+  sunset_header: null
+  notes: No public deprecation policy or RFC 8594 Sunset/Deprecation header contract was found.
+sla:
+  url: null
+deprecated_operations: []

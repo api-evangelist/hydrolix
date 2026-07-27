@@ -1,0 +1,25 @@
+# Hydrolix
+
+> Hydrolix is a real-time log analytics and observability platform — a streaming data lake that stores full-fidelity log data cost-effectively for 15+ months while serving low-latency queries and dashboards. Data is ingested via an HTTP streaming API, Amazon Kinesis / Data Firehose, S3 autoingest, and OpenTelemetry, and queried with the ClickHouse SQL dialect.
+
+## APIs
+- [Config API](https://docs.hydrolix.io/latest/openapi/config-api/): Configure and manage the cluster — orgs, projects, tables, transforms, functions, jobs, and service accounts.
+- [Stream API](https://docs.hydrolix.io/latest/openapi/stream/): Real-time HTTP streaming data ingestion.
+- [Query API](https://docs.hydrolix.io/latest/openapi/query/): Execute ClickHouse SQL queries and retrieve results.
+
+## Docs
+- [Documentation](https://docs.hydrolix.io/latest/): Product and API documentation.
+- [API Reference](https://docs.hydrolix.io/latest/openapi/): Config, Stream, and Query API references.
+- [Authentication](authentication/hydrolix-authentication.yml): Credential login → bearer token; service accounts for automation.
+
+## Tooling
+- [hdxcli](https://github.com/hydrolix/hdxcli): Official command-line client (`pip install hdxcli`).
+- [MCP server](https://github.com/hydrolix/mcp-hydrolix): Official Model Context Protocol server (`uvx mcp-hydrolix`) — tools: run_select_query, list_databases, list_tables, get_table_info.
+- [AI Toolkit](https://github.com/hydrolix/hydrolix-ai-toolkit): Agent Skills (bot-insights, debugging-hydrolix-queries).
+- [Grafana data source](https://github.com/hydrolix/grafana-datasource-plugin): Visualize Hydrolix data in Grafana.
+- Connectors: [Trino](https://github.com/hydrolix/trino-connector), [Spark/Databricks](https://github.com/hydrolix/spark-connector), [Splunk](https://github.com/hydrolix/splunk-connector).
+
+## Operations
+- [Status](https://hydrolixstatus.com): Service status page.
+- [Blog](https://hydrolix.io/blog/): Company and product blog.
+- [AWS Marketplace](https://hydrolix.io/aws-marketplace): Deployment and purchase.

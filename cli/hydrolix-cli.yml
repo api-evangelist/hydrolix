@@ -1,0 +1,50 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/hydrolix/hdxcli
+name: hdxcli
+description: Official command-line tool to interact with Hydrolix clusters via the Config API.
+binary: hdxcli
+package: packages/hydrolix-packages.yml
+repo: https://github.com/hydrolix/hdxcli
+install:
+  - method: pip
+    command: pip install hdxcli
+    requires: Python >= 3.10
+auth:
+  style: interactive-login
+  notes: >-
+    First command triggers interactive setup (cluster hostname + TLS). Authenticate with
+    Hydrolix username/password, then optionally switch to a Service Account for long-running
+    or automated sessions. Credentials can also be passed via --username / --password flags.
+  init_command: hdxcli init
+command_groups:
+  - name: profile
+    description: Manage CLI profiles / cluster targets.
+  - name: init
+    description: Interactive first-run setup (host, TLS, credentials).
+  - name: set
+    description: Set the active project/table context.
+  - name: unset
+    description: Clear the active context.
+  - name: project
+    description: CRUD on projects.
+  - name: table
+    description: CRUD on tables.
+  - name: transform
+    description: Manage table transforms (ingest schemas).
+  - name: dictionary
+    description: Manage dictionaries.
+  - name: function
+    description: Manage user-defined functions.
+  - name: storage
+    description: Manage storage configuration.
+  - name: service-account
+    description: Manage service accounts for automated auth.
+  - name: job
+    description: Manage batch/ingest jobs.
+  - name: version
+    description: Show CLI version.
+key_flows:
+  - Configure a cluster profile and log in (hdxcli init).
+  - Create a project and table, then attach a transform to define the ingest schema.
+  - Switch to a service account for scripted/automated operations.
