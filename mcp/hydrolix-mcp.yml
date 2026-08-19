@@ -5,22 +5,31 @@ source: https://github.com/hydrolix/mcp-hydrolix
 server:
   name: mcp-hydrolix
   vendor: Hydrolix
-  transport: stdio        # stdio (default, local) | http | sse (remote)
+  transport: stdio
   install: uvx mcp-hydrolix
   package: https://pypi.org/project/mcp-hydrolix/
   repo: https://github.com/hydrolix/mcp-hydrolix
   requires: Python 3.13+ (via uv/pip); a Hydrolix cluster with query credentials or a service account
-  clients: [Claude Desktop, Claude Code, OpenAI Codex, Gemini CLI]
+  clients:
+  - Claude Desktop
+  - Claude Code
+  - OpenAI Codex
+  - Gemini CLI
 tools:
-  - name: run_select_query
-    description: Execute a read-only SELECT SQL query against the Hydrolix cluster (ClickHouse SQL dialect).
-  - name: list_databases
-    description: List all databases available on the Hydrolix cluster.
-  - name: list_tables
-    description: List all tables within a given database.
-  - name: get_table_info
-    description: Get table metadata such as the schema/columns for a specific table.
-notes: >-
-  Official Hydrolix MCP server. Connects to a Hydrolix cluster's query endpoint and exposes a
-  read-oriented SQL surface for agents. Complemented by the hydrolix-ai-toolkit Agent Skills,
-  which build on these tools for higher-level workflows.
+- name: run_select_query
+  description: Execute a read-only SELECT SQL query against the Hydrolix cluster (ClickHouse SQL dialect).
+- name: list_databases
+  description: List all databases available on the Hydrolix cluster.
+- name: list_tables
+  description: List all tables within a given database.
+- name: get_table_info
+  description: Get table metadata such as the schema/columns for a specific table.
+notes: Official Hydrolix MCP server. Connects to a Hydrolix cluster's query endpoint and exposes a read-oriented
+  SQL surface for agents. Complemented by the hydrolix-ai-toolkit Agent Skills, which build on these tools
+  for higher-level workflows.
+deployment:
+  mode: local-stdio
+  verified: searched
+  tools: 4
+  checked: '2026-08-12'
+  source: catalog MCP census
