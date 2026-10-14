@@ -26,3 +26,29 @@
     detected: '2026-10-13'
   status: not-a-workflow
   arazzo: null
+- slug: hydrolix-grafana-own
+  label: Grafana (own)
+  partner: grafana-com
+  partner_name: Grafana (own)
+  category: Data Source
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://grafana.com/grafana/plugins/hydrolix-hydrolix-datasource/
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: hydrolix-splunk-own
+  label: Splunk (own)
+  partner: splunk
+  partner_name: Splunk (own)
+  category: app
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://splunkbase.splunk.com/app/7540/
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
