@@ -64,6 +64,97 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Hydrolix is a company surfaced as a portfolio company of qed-investors, wing-venture-capital and added to the API Evangelist network as a stub for enrichment. Sector: fintech. This profile is a lead awaiting the enrichment pipeline.
+Hydrolix is a real-time log analytics and observability platform built as a streaming data lake: it decouples ingest, storage, and compute so teams can retain full-fidelity log and event data cost-effectively for 15+ months while still serving low-latency queries and dashboards. Data is ingested through an HTTP Streaming API, Amazon Kinesis / Data Firehose, S3 autoingest, and OpenTelemetry, then queried with the ClickHouse SQL dialect via a Query API, MCP server, and connectors for Grafana, Trino, Spark/Databricks, and Splunk. Hydrolix deploys in the customer's own cloud (BYOC on AWS/GCP/Kubernetes) and exposes a Config API, Stream API, and Query API, a hdxcli command-line tool, and an official Model Context Protocol server.
 
-Backed by: qed-investors, wing-venture-capital — https://hydrolix.io
+**Areas:** Company · Observability · Log Analytics · Data Lake · Streaming · ClickHouse · Monitoring · Time Series
+
+## Hydrolix on APIs.io
+
+Everything profiled for Hydrolix is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/hydrolix/](https://apis.io/providers/hydrolix/)** — or go straight to one of the APIs or properties below.
+
+### APIs (3)
+
+- [Hydrolix Config API](https://apis.io/apis/hydrolix/hydrolix-config-api/) — Configure and manage a Hydrolix cluster — orgs, projects, tables, transforms, functions, jobs, and service accounts.
+- [Hydrolix Stream API](https://apis.io/apis/hydrolix/hydrolix-stream-api/) — Real-time HTTP streaming data ingestion into Hydrolix tables.
+- [Hydrolix Query API](https://apis.io/apis/hydrolix/hydrolix-query-api/) — Execute ClickHouse SQL queries against Hydrolix and retrieve results.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [mcp-hydrolix](https://apis.io/servers/hydrolix/mcp-hydrolix/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Hydrolix Authentication](https://apis.io/security/hydrolix/hydrolix-authentication/)
+- [Hydrolix Domain Security](https://apis.io/security/hydrolix/hydrolix-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://hydrolix.io)
+- [Documentation](https://docs.hydrolix.io/latest/)
+- [API reference](https://docs.hydrolix.io/latest/openapi/)
+- [Sign up](https://hydrolix.io/aws-marketplace)
+- [GitHub](https://github.com/hydrolix)
+- [Status](https://hydrolixstatus.com)
+
+## API Evangelist rating
+
+**Kin Score 19.8** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 76.7 |
+| Contract quality | 0.0 |
+| Contract governance | 4.5 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 50.0 |
+| Access clarity | 0.0 |
+
+**Agent readiness 9.6** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | documented (partial credit) |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | yes |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 16.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/hydrolix/](https://apis.io/providers/hydrolix/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Hydrolix: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/hydrolix/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
